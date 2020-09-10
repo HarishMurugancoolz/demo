@@ -1,3 +1,4 @@
+#pragma once
 /*
  *  Catch v2.13.1
  *  Generated: 2020-09-07 12:12:38.090364
