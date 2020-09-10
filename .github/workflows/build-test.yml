@@ -13,9 +13,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-        
+    
+    - name: install cppcheck static analysis
+      run: sudo apt-get update && sudo apt-get install -y cppcheck
+      
     - name: build
-      run: g++ -Wall -Wextra --coverage -o testchecker *.cpp
+      run: g++ -Wall -Wextra -Werror --coverage -o testchecker *.cpp
+      
+    - name: static analysis
+      run: cppcheck --enable=all --error-exitcode=0 .
       
     - name: run
       run: ./testchecker
