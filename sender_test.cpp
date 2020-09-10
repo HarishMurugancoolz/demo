@@ -23,7 +23,7 @@ TEST_CASE("when csv File is given  then report the file in vector form" )
 {
 	vector<vector<string>> csv_vector = { {"what","good","how"},{"a","modify","nice"},{"great","readme","this"},{"session","","is"} };
 	ofstream fout;
-	fout.open("test.csv", ios::out, ios::trunc);
+	fout.open("test.csv", ios::out|ios::trunc);
 	fout << "what" << ",";
 	fout << "good" <<"," ;
 	fout << "how";
