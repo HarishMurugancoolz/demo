@@ -21,10 +21,11 @@ jobs:
       run: g++ -Wall -Wextra -Werror --coverage -o testchecker *.cpp
       
     - name: static analysis
-      run: cppcheck --enable=all --error-exitcode=0
+      run: cppcheck --enable=all --error-exitcode=1
       
     - name: run
       run: ./testchecker
     
     - name: coverage report
       run: gcov -r *.cpp
+
