@@ -21,7 +21,7 @@ jobs:
       run: g++ -Wall -Wextra --coverage -o testchecker sender-test/*.cpp
       
     - name: static analysis
-      run: cppcheck --enable=all --error-exitcode=1 .
+      run: cppcheck --force--enable=all --error-exitcode=1 .
        
     - name: run
       run:  ./testchecker
