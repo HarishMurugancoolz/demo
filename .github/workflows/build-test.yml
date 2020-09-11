@@ -22,7 +22,10 @@ jobs:
       
     - name: static analysis
       run: cppcheck --enable=all --error-exitcode=1 .
-    
+       
+    - name: run
+      run: sender.exe harishtext.csv 2./testchecker
+  
     - name: coverage report
       run: gcov -r sender/*.cpp
 
