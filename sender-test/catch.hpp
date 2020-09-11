@@ -1537,7 +1537,7 @@ inline id performOptionalSelector(id obj, SEL sel) {
 #define CATCH_ARC_STRONG
 #else
 inline void arcSafeRelease(NSObject*) {}
-inline id performOptionalSelector(id obj, SEL sel) {
+/*inline id performOptionalSelector(id obj, SEL sel) {
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
@@ -1548,7 +1548,7 @@ inline id performOptionalSelector(id obj, SEL sel) {
 #pragma clang diagnostic pop
 #endif
 	return nil;
-}
+}*/
 #define CATCH_UNSAFE_UNRETAINED __unsafe_unretained
 #define CATCH_ARC_STRONG __strong
 #endif
