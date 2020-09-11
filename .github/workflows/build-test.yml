@@ -27,5 +27,5 @@ jobs:
       run:  ./testchecker
   
     - name: coverage report
-      run: gcov -r sender/*.cpp
+      run: gcov -r sender-test/*.cpp
 
