@@ -24,7 +24,7 @@ jobs:
       run: cppcheck --enable=all --error-exitcode=1 .
        
     - name: run
-      run:  ./testchecker sender.exe harishtext.csv 
+      run:  ./testchecker harishtext.csv 
   
     - name: coverage report
       run: gcov -r sender/*.cpp
