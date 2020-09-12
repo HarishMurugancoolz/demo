@@ -4,29 +4,33 @@
 #include<map>
 #include<iostream>
 using namespace std;
-namespace columnFilter
+namespace ColumnFilter
 {
-	class columnFilter
+	class ColumnFilter
 	{
 	private:
-		vector<string> specifiedColumnReview;
+		vector<string> ColumnReview;
+		vector<vector<string>> csvFileArray;
+		int col_number;
 	public:
-		
-		vector<string> getColumn(vector<vector<string>> csv_file_array, int given_col_number)
+		ColumnFilter(vector<vector<string>> CFA,int col_num):csvFileArray(CFA),col_number(col_num){}
+
+		vector<string> getColumn()
 		{
-			for (unsigned int i_row = 0; i_row < csv_file_array.size(); i_row++)
+			for (unsigned int i_row = 0; i_row < csvFileArray.size(); i_row++)
 			{
-				specifiedColumnReview.push_back(csv_file_array[i_row][given_col_number-1]);
+				ColumnReview.push_back(csvFileArray[i_row][col_number-1]);
 			}
-			return specifiedColumnReview;
+			return ColumnReview;
+		}
+		void printColumnReview() const
+		{
+			for (unsigned int i_word = 0; i_word < ColumnReview.size(); i_word++)
+			{
+				cout << ColumnReview[i_word] << " ";
+			}
 		}
 
-		void printColumnReview(vector<string> columnReview) const
-		{
-			for (unsigned int i_word = 0; i_word < columnReview.size(); i_word++)
-			{
-				cout << columnReview[i_word] << " ";
-			}
-		}
+		
 	};
 }
