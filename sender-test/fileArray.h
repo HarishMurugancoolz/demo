@@ -5,13 +5,16 @@
 using namespace std;
 namespace FileArray
 {
-	class FileToArrayCreator
+	class FileArrayCreator
 	{
 	private:
-		string line, word,temp;
+		string line, word;
 		vector<string> row;
-		vector<vector<string>> csv_file_array;
+		vector<vector<string>> csvFileArray;
+		istream& fin;
 	public:
+		
+		FileArrayCreator(istream& f):fin(f){}
 		vector<string> pushWordsToRowVector(stringstream& s)
 		{
 			
@@ -22,25 +25,25 @@ namespace FileArray
 			}
 			return row;
 		}
-		vector<vector<string>> createFileArray(istream& fin)
+		vector<vector<string>> getFileArray()
 		{
 			while (getline(fin, line, '\n'))
 			{
 				stringstream s(line);
 				row = pushWordsToRowVector(s);
-				csv_file_array.push_back(row);
+				csvFileArray.push_back(row);
 				row.clear();
 
 			}
-			return csv_file_array;
+			return csvFileArray;
 		}
-		void printReview(vector<vector<string>>& csv_file_array) const
+		void printReview() const
 		{
-			for (unsigned int i_col = 0; i_col < csv_file_array[i_col].size(); i_col++)
+			for (unsigned int i_col = 0; i_col < csvFileArray[i_col].size(); i_col++)
 			{
-				for (unsigned int i_row = 0; i_row < csv_file_array.size(); i_row++)
+				for (unsigned int i_row = 0; i_row < csvFileArray.size(); i_row++)
 				{
-					cout << csv_file_array[i_row][i_col] << " ";
+					cout << csvFileArray[i_row][i_col] << " ";
 				}
 			}
 		}
