@@ -3,7 +3,6 @@
 #include<fstream>
 #include"fileArray.h"
 #include"ColumnFilter.h"
-#include"catch.hpp"
 using namespace std;
 
 
