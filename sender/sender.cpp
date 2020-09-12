@@ -23,7 +23,7 @@ int main(int argc,char*argv[])
 	csvFileArray =createArray.getFileArray();
 	fin.close();
 	
-	if (argc>2&&argv[2] != NULL)
+	if (argc>2)
 	{
 		vector<string> ColumnReview;
 		int col_number = stoi(argv[2]);
