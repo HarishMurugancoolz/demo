@@ -21,7 +21,7 @@ TEST_CASE("Reports True when array is empty")
 TEST_CASE("when ifstream object and correct file name is given then return false")
 {
 	ifstream fin;
-	REQUIRE(FileArray::isFileNotOpen(fin, "sample-review-data.csv")==false);
+	REQUIRE(FileArray::isFileNotOpen(fin, "sender-test/test-data/sample-review-data.csv")==false);
 
 }
 TEST_CASE("when ifstream object and incorrect file name is given then return true")
