@@ -9,7 +9,6 @@
 #include<sstream>
 #include<fstream>
 using namespace std;
-
 TEST_CASE("Reports true when argument count equal to one")
 {
 	REQUIRE(FileArray::checkIfArgumentCountLessThanOne(1) == true);
