@@ -24,7 +24,7 @@ jobs:
       run: cppcheck --check-config --force --enable=all --error-exitcode=1 .
        
     - name: run
-      run: ./senderExe sender/test-data/sample-review-data.csv 2
+      run: ./senderExe sender-test/test-data/sample-review-data.csv 2
   
     - name: coverage report
       run: gcov -r sender/*.cpp
