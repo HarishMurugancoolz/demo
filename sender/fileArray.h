@@ -1,4 +1,5 @@
 
+
 #include<vector>
 #include<string>
 #include<sstream>
@@ -47,6 +48,8 @@ namespace FileArray
 		
 		
 	};
+	bool checkIfArgumentCountLessThanOne(int argc);
+	bool checkIfFileArrayIsEmpty(vector<vector<string>> csvFileArray);
 	bool isFileNotOpen(ifstream& fin,string fileName);
 	void printReview(vector<vector<string>> csvFileArray);
 }
