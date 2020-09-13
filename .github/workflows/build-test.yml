@@ -18,13 +18,13 @@ jobs:
       run: sudo apt-get update && sudo apt-get install -y cppcheck
       
     - name: build
-      run: g++ -Wall -Wextra -Werror --coverage -o testchecker sender-test/*.cpp
+      run: g++ -Wall -Wextra -Werror --coverage -o senderExe sender/*.cpp
       
     - name: static analysis
       run: cppcheck --check-config --force --enable=all --error-exitcode=1 .
        
     - name: run
-      run: ./testchecker
+      run: ./senderExe sender/test-data/sample-review-data.csv 2
   
     - name: coverage report
       run: gcov -r sender/*.cpp
