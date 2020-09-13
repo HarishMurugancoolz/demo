@@ -1,42 +1,45 @@
-//#define CATCH_CONFIG_RUNNER
-//#include"catch.hpp"
 #include<iostream>
 #include<vector>
 #include<fstream>
 #include"fileArray.h"
 #include"ColumnFilter.h"
 using namespace std;
-bool checkIfArgumentCountLessThanOne(int argc)
+
+
+void MessageWhenFileNameNotEntered(int argc)
 {
-	return (argc <= 1);
-	
-}
-bool checkIfFileIsEmpty(vector<vector<string>> csvFileArray)
-{
-	return (csvFileArray.size() == 0);
-}
-	
-int main(int argc,char*argv[])
-{
-	ifstream fin;
-	
-	if (checkIfArgumentCountLessThanOne(argc))
+	if (FileArray::checkIfArgumentCountLessThanOne(argc))
 	{
 		cout << "File name not passsed" << endl;
 		exit(0);
 	}
+}
+void MessageWhenFileIsNotOpen(ifstream& fin, char* argv[])
+{
 	if (FileArray::isFileNotOpen(fin, argv[1]))
 	{
 		cout << "File cannot be opened" << endl;
 		exit(0);
 	}
-	
-	FileArray::FileArrayCreator filearraycreator(fin);
-	vector<vector<string>> csvFileArray = filearraycreator.getFileArray();
-	if (checkIfFileIsEmpty(csvFileArray))
+}
+void MessageWhenFileIsEmpty(vector<vector<string>> csvFileArray)
+{
+	if (FileArray::checkIfFileArrayIsEmpty(csvFileArray))
 	{
 		cout << "File is Empty" << endl;
-	};
+	}
+}
+
+	
+int main(int argc,char*argv[])
+{
+	ifstream fin;
+	MessageWhenFileNameNotEntered(argc);
+	MessageWhenFileIsNotOpen(fin,argv);
+	FileArray::FileArrayCreator filearraycreator(fin);
+	vector<vector<string>> csvFileArray = filearraycreator.getFileArray();
+	MessageWhenFileIsEmpty(csvFileArray);
+	
 	fin.close();
 	if (argc>2)
 		ColumnFilter::getColumnReview(csvFileArray,stoi(argv[2]));
