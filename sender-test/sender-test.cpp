@@ -37,8 +37,8 @@ TEST_CASE("when stringstream is given then report it in vector form of string")
 	vector<string>row = { "01/03/2019","hello how are you" };
 	stringstream s(sentence);
 	ifstream fin;
-	FileArray::FileArrayCreator ftac(fin);
-	REQUIRE(ftac.pushWordsToRowVector(s)== row);
+	FileArray::CSVFileArrayCreator csvFile(fin);
+	REQUIRE(csvFile.pushWordsToRowVector(s)== row);
 
 }
 
@@ -54,8 +54,8 @@ TEST_CASE("when csv File is given  then report the file in vector form" )
 	fout.close();
 	ifstream fin;
 	fin.open("test.csv", ios::in);
-	FileArray::FileArrayCreator ftac(fin);
-	REQUIRE(ftac.getFileArray() == csv_vector);
+	FileArray::FileArrayCreator *filecreator = new(nothrow)FileArray::CSVFileArrayCreator(fin);
+	REQUIRE(filecreator->getFileArray() == csv_vector);
 
 
 }
