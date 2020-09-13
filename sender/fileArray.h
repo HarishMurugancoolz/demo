@@ -1,5 +1,6 @@
 
 
+
 #include<vector>
 #include<string>
 #include<sstream>
@@ -9,13 +10,18 @@ namespace FileArray
 {
 	class FileArrayCreator
 	{
+	public:
+		virtual vector<vector<string>> getFileArray() = 0;
+	};
+	class CSVFileArrayCreator:public FileArrayCreator
+	{
 	private:
 		string line, word;
 		vector<string> row;
 		vector<vector<string>> csvFileArray;
 		istream& fin;
 	public:
-		FileArrayCreator(istream& f):fin(f){}
+		CSVFileArrayCreator(istream& f):fin(f){}
 		bool isLineEmpty(string line)
 		{
 			return(line == ","||line=="");
