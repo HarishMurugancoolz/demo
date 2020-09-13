@@ -1,0 +1,90 @@
+ReviewDate,Comments
+,
+,
+,
+,
+,
+4/27/2020 9:14,what does this help with?
+,
+,
+,
+,
+5/13/2020 15:45,change spelling
+5/13/2020 15:50,remove this log if not required
+5/13/2020 15:51,Don't use static context
+5/13/2020 15:51,remove this log if not required
+5/13/2020 15:52,verify the string 
+5/14/2020 16:43,please add test cases for firebase performance
+,
+,
+,
+,
+,
+,
+5/18/2020 14:57,can return full list or method can be renamed to fetchFirst()
+5/18/2020 14:58,out can be removed
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+5/19/2020 11:11,Remove this import as it is not used
+,
+,
+3/12/2020 11:37,No Additional Comments
+3/12/2020 11:37,No Additional Comments
+3/12/2020 11:37,No Additional Comments
+3/12/2020 11:37,No Additional Comments
+3/11/2020 14:51,No Additional Comments
+3/11/2020 14:51,No Additional Comments
+3/11/2020 14:51,No Additional Comments
+3/11/2020 15:56,No Additional Comments
+3/11/2020 15:56,No Additional Comments
+3/11/2020 15:56,No Additional Comments
+3/11/2020 15:56,No Additional Comments
+3/14/2020 9:11,No Additional Comments
+3/14/2020 9:11,No Additional Comments
+3/14/2020 9:11,No Additional Comments
+3/14/2020 9:11,No Additional Comments
+3/12/2020 10:56,No Additional Comments
+3/12/2020 10:56,No Additional Comments
+3/12/2020 10:56,No Additional Comments
+3/12/2020 10:56,No Additional Comments
+3/12/2020 10:56,No Additional Comments
+3/17/2020 11:06,No Additional Comments
+3/17/2020 11:06,No Additional Comments
+3/17/2020 11:06,No Additional Comments
+3/13/2020 18:10,adding handlings here will not work
+3/13/2020 18:10,adding handlings here will not work
+3/13/2020 18:13,Why user will onboard again if login fails.
+3/13/2020 18:15,No Additional Comments
+3/16/2020 16:02,Remove all the changes in this file
+3/16/2020 16:03,Remove all the changes in this file
+3/16/2020 16:04,Move it to a different function
+3/16/2020 16:04,Revert all the changes on this file
+3/16/2020 16:05,Remove all the changes in this file
+3/16/2020 16:38,Return after starting the fragment
+3/16/2020 16:38,Redundant code. Remove this return.
+3/17/2020 11:06,No Additional Comments
+3/17/2020 11:06,No Additional Comments
+3/17/2020 11:06,No Additional Comments
+3/17/2020 11:06,No Additional Comments
+3/17/2020 11:06,No Additional Comments
+3/16/2020 16:13,No Additional Comments
+3/16/2020 16:13,No Additional Comments
+3/16/2020 16:13,No Additional Comments
+3/16/2020 16:13,No Additional Comments
+3/16/2020 16:13,No Additional Comments
+3/16/2020 16:13,No Additional Comments
+3/27/2020 11:36,No Additional Comments
+3/27/2020 11:36,No Additional Comments
+3/27/2020 11:36,No Additional Comments
+3/27/2020 11:36,No Additional Comments
