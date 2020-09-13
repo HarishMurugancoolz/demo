@@ -8,7 +8,15 @@ bool FileArray::isFileNotOpen(ifstream&fin, string fileName)
 	fin.open(fileName,ios::in);
 	return(!fin.is_open());
 }
+bool FileArray::checkIfFileArrayIsEmpty(vector<vector<string>> csvFileArray)
+{
+	return (csvFileArray.size() == 0);
+}
+bool FileArray::checkIfArgumentCountLessThanOne(int argc)
+{
+	return (argc <= 1);
 
+}
 void FileArray::printReview(vector<vector<string>> csvFileArray) 
 {
 	
