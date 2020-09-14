@@ -1,0 +1,20 @@
+4/28/2020 19:43,Why only imports are added in this file ?
+4/28/2020 19:46,fix the style
+4/28/2020 19:46,single line else do not put { }
+4/28/2020 19:48,"Allow the hole area clickable not just arrow button
+Note : Link should be excluded"
+5/4/2020 12:56,Use observe. Do not user observeForever as the observer will exist without the knowledge  of fragment lifecycle Will cause Memory Leak
+5/4/2020 13:29,Move this logic to view model
+5/4/2020 13:53,No Additional Comments
+4/28/2020 10:37,Move this method to the PathSelectorFragment class. 
+4/28/2020 10:46,"Revert this and in the solutionSelectionLayout add 
+        android:layout_weight=""1""
+        android:layout_height=""0dp"""
+5/4/2020 13:53,No Additional Comments
+5/4/2020 13:53,No Additional Comments
+4/28/2020 15:12,No Additional Comments
+4/28/2020 15:12,No Additional Comments
+4/28/2020 15:12,No Additional Comments
+4/28/2020 15:12,No Additional Comments
+4/28/2020 15:12,No Additional Comments
+4/28/2020 15:12,No Additional Comments
