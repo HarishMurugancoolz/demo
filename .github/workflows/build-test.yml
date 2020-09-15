@@ -27,5 +27,5 @@ jobs:
       run: ./senderExe
   
     - name: sender coverage report
-      run: gcov -r Sender_test.cpp
+      run: gcov -r Sender_test.cpp ColumnFilter.cpp fileArray.cpp
 
