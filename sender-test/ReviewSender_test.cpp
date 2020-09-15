@@ -23,7 +23,7 @@ TEST_CASE("when ifstream object and correct file name is given then return false
 			"File can be Opened")
 {
 	ifstream fin;
-	REQUIRE(FileToArrayConverter::IsFileNotOpen(fin, "harishtext.csv")==false);
+	REQUIRE(FileToArrayConverter::IsFileNotOpen(fin, "sample-review2.csv")==false);
 
 }
 TEST_CASE("when ifstream object and incorrect file name is given then return true"
