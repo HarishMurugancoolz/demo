@@ -4,12 +4,6 @@
 #include<sstream>
 #include<iostream>
 using namespace std;
-namespace FileArray
-#include<vector>
-#include<string>
-#include<sstream>
-#include<iostream>
-using namespace std;
 namespace FileToArrayConverter
 {
 	class FileToArrayConverter
