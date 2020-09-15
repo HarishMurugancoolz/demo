@@ -26,6 +26,6 @@ jobs:
     - name: run
       run: ./senderExe
   
-    - name: coverage report
+    - name: sender coverage report
       run: gcov -r sender/*.cpp
 
